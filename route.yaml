@@ -1,0 +1,26 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: thanu-gateway
+  namespace: thanu-ns1
+spec:
+  parentRefs:
+    - name: newkgateway
+  rules: 
+    - matches:
+      - path:
+          type: PathPrefix
+          value: /
+      filters:
+        - type: URLRewrite
+          urlRewrite:
+            path:
+              type: ReplacePrefixMatch
+              replacePrefixMatch: /
+      backendRefs:
+        - name: thanu-svc
+          port: 4545 
+
+
+
+
