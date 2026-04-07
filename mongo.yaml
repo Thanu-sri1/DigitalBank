@@ -32,6 +32,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: thanu-svc
+  namespace: thanu-ns1
 spec:
   selector:
     app: mongo
