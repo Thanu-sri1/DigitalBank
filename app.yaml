@@ -5,7 +5,7 @@ metadata:
   namspace: thanu-ns1
 spec: 
   replicas: 3
-  statergy:
+  strategy:
     type: RollingUpdate
     rollingUpdate:
       maxUnavailable: 1
