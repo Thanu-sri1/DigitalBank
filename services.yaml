@@ -4,8 +4,8 @@ metadata:
   name: thanu-svc
 spec:
   selector:
-    digital:bank
+    digital: bank
   ports:
     port: 4545
     targetPort: 4545
-  type: clusterIP
+  type: ClusterIP
