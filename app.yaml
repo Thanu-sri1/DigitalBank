@@ -12,11 +12,11 @@ spec:
       maxSurge: 1
   selector:
     matchLabels:
-      digital:bank
+      digital: bank
   template:
     metadata:
       labels:
-        digital:bank
+        digital: bank
     spec:
       containers:
         name: digitalbank
