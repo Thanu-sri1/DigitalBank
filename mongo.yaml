@@ -4,7 +4,7 @@ metadata:
   name: thanu-mongo
   namespace: thanu-ns1
 spec:
-  replicas: 3
+  replicas: 2
   minReadySeconds: 10
   selector:
     matchLabels:
