@@ -41,5 +41,16 @@ spec:
               secretKeyRef:
                 name: thanu-secret
                 key: PORT
-                    
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: thanu-svc
+spec:
+  selector:
+    digital: bank
+  ports:
+  - port: 4545
+    targetPort: 4545
+  type: ClusterIP                
 
