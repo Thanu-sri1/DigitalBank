@@ -10,10 +10,10 @@ spec:
     rollingUpdate:
       maxUnavailable: 1
       maxSurge: 1
-    selector:
+  selector:
       matchLabels:
         digital:bank
-    template:
+  template:
       metadata:
         labels:
           digital:bank
