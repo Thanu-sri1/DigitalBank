@@ -31,15 +31,15 @@ spec:
             cpu: "200m"
             memory: "512Mi"
         env:
-        - name: MONGODB_URI
-          valueFrom:
-            secretref:
-              name: thanu-secret
-              key: MONGODB_URI
-        - name: PORT
-          valueFrom:
-            secretref:
-              name: thanu-secret
-              key: PORT
-                  
+          - name: MONGODB_URI
+            valueFrom:
+              secretref:
+                name: thanu-secret
+                key: MONGODB_URI
+          - name: PORT
+            valueFrom:
+              secretref:
+                name: thanu-secret
+                key: PORT
+                    
 
