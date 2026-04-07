@@ -33,12 +33,12 @@ spec:
           env:
           - name: MONGODB_URI
             valueFrom:
-              secretref:
+              secretKeyRef:
                 name: thanu-secret
                 key: MONGODB_URI
           - name: PORT
             valueFrom:
-              secretref:
+              secretKeyRef:
                 name: thanu-secret
                 key: PORT
                     
