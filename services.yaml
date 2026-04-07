@@ -6,6 +6,6 @@ spec:
   selector:
     digital: bank
   ports:
-    port: 4545
+  - port: 4545
     targetPort: 4545
   type: ClusterIP
