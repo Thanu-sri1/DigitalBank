@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: thanu-app 
+  namspace: thanu-ns1
+spec: 
+  replicas: 3
+  statergy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+    selector:
+      matchLabels:
+        digital:bank
+    template:
+      metadata:
+        labels:
+          digital:bank
+      spec:
+        containers:
+          name: digitalbank
+          image: muralisocial123/digital-bank:1.1.0
+          ports:
+            containerPort: 4545
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "200m"
+              memory: "512Mi"
+            env:
+            - name: MONGODB_URI
+              valueFrom:
+                secretref:
+                  name: thanu-secret
+                  key: MONGODB_URI
+                
+
