@@ -23,13 +23,13 @@ spec:
           image: muralisocial123/digital-bank:1.1.0
           ports:
           - containerPort: 4545
-            resources:
-              requests:
-                cpu: "100m"
-                memory: "256Mi"
-              limits:
-                cpu: "200m"
-                memory: "512Mi"
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "200m"
+              memory: "512Mi"
           env:
           - name: MONGODB_URI
             valueFrom:
